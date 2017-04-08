@@ -1,0 +1,480 @@
+/* CSS Document */
+
+body
+{
+	background-color: #CCCCCC;
+}
+
+#body_struct
+{
+	box-shadow:0 0 10px #000000;
+	font-family: Cambria, "Blackadder ITC";
+	height: 470px;
+	margin: 0px auto 0px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 11%;
+	max-height: 470px;
+	max-width: 1097px;
+	overflow: auto;
+	position: absolute;
+	width: 80%;
+	-webkit-border-radius: 8px;
+}
+
+#body_struct #left_part
+{
+	float: left;
+	width: 50%;
+}
+
+#body_struct #right_part
+{
+	float: right;
+	width: 50%;
+}
+
+#body_struct .dropdownlist
+{
+	width: 63%;
+	-webkit-border-radius: 8px;
+}
+
+#aboutus
+{	
+	background-image:url(../images/aboutus.jpg);
+	background-size: 100% 100%;
+	float: left;
+	height: 470px;
+	width: 100%;
+}
+
+#careerus
+{	
+	background-image:url(../images/careerus.jpg);
+	background-size: 100% 100%;
+	float: left;
+	height: 490px;
+	width: 100%;
+}
+
+#careerus .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#careerus .career_textbox
+{
+	width: 200px;
+	-webkit-border-radius: 8px;
+}
+
+#careerus .career_button
+{
+	background-color:#C1D5E0;
+	color:#222f50;
+	margin-left: 40%;
+	width:30%;
+	-webkit-border-radius: 8px;
+}
+
+#careerus .career_left
+{
+	float: left;
+	height: 320px;
+	width: 50%;
+}
+
+#careerus .career_right
+{
+	float: right;
+	height: 320px;
+	width: 50%;
+}
+
+#contactus
+{	
+	background-image:url(../images/contactus.jpg);
+	background-size: 100% 100%;
+	float: left;
+	height: 470px;
+	width: 100%;
+}
+
+#contactus .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#contactus .contact_textbox
+{
+	width: 62%;
+	-webkit-border-radius: 8px;
+}
+
+#contactus .contact_button
+{
+	background-color:#C1D5E0;
+	color:#222f50;
+	margin-left: 40%;
+	width:30%;
+	-webkit-border-radius: 8px;
+}
+
+#contactus .contact_left
+{
+	float: left;
+	height: 430px;
+	width: 60%;
+}
+
+#contactus .contact_right
+{
+	float: right;
+	height: 430px;
+	width: 40%;
+}
+
+#dashboard_search
+{	
+	background-image: url(../images/dashboard.jpg);
+	background-size: 100% 100%;
+	height: 470px;
+	width: 100%;
+}
+
+#dashboard_search .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-top: 13px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#dashboard_search table
+{
+	border: groove;
+	border-style: groove;
+	font-size: 18px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	-webkit-border-radius: 8px;
+}
+
+#dashboard_search tr
+{
+	background-color: #D7DAD9
+}
+
+#dashboard_search td
+{
+	width: 15%;
+	-webkit-border-radius: 8px;
+}
+
+#employer
+{	
+	background-image:url(../images/login_emp.jpg);
+	background-size: 100% 100%;
+	float: left;
+	height: 470px;
+	width: 100%;
+}
+
+#employer #elogin
+{
+	background-color: #C1D5E0;
+	float: left;
+	height: 30%;
+	margin-left: 675px;
+	margin-top: 30px;
+	width: 35%;
+	-webkit-border-radius: 8px;	
+}
+
+#employer #button
+{
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: 25px;
+	margin-left: 2%;
+	width: 31%;
+	-webkit-border-radius: 8px;
+}
+
+#employer #joinus_heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#employer #ejoin
+{
+	font-family: Cambria, "Blackadder ITC";
+}
+
+#employer #ejoin_button
+{
+	background-image: url(../images/refresh.jpg);
+}
+
+#jobfair_search
+{	
+	background-image: url(../images/quicksearch.jpg);
+	background-size: 100% 100%;
+	height: 470px;
+	width: 100%;
+}
+
+#jobfair_search .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-top: 13px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#jobfair_search table
+{
+	border: groove;
+	border-style: groove;
+	font-size: 18px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	-webkit-border-radius: 8px;
+}
+
+#jobfair_search tr
+{
+	background-color: #D7DAD9
+}
+
+#jobfair_search td
+{
+	width: 15%;
+	-webkit-border-radius: 8px;
+}
+
+#quick_search
+{	
+	background-image: url(../images/quicksearch.jpg);
+	background-size: 100% 100%;
+	height: 470px;
+	width: 100%;
+}
+
+#quick_search .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-top: 13px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#quick_search table
+{
+	border: groove;
+	border-style: groove;
+	font-size: 18px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	-webkit-border-radius: 8px;
+}
+
+#quick_search tr
+{
+	background-color: #D7DAD9;
+}
+
+#quick_search td
+{
+	width: 15%;
+	-webkit-border-radius: 8px;
+}
+
+#search
+{	
+	background-image: url(../images/search.jpg);
+	background-size: 100% 100%;
+	height: 470px;
+	width: 100%;
+}
+
+#search .heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+#search_body
+{
+	font-size: 20px;
+	height: 470px;
+	width: 100%;
+}
+
+#search_body #ddl
+{
+	border: thin;
+	border-radius: 8px;	
+	border-style: groove;
+	width: 70%;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+#search_body #button
+{
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	font-size: 18px;
+	height: 35px;
+	margin-left: 45%;
+	width: 10%;
+	-webkit-border-radius: 8px;
+
+}
+
+#search_body #bck_clr
+{
+	background: #CFCAC6;
+	background-color: #CFCAC6;
+}
+
+#search_body #left
+{
+	float: left;
+	width: 50%;
+}
+
+#search_body #right
+{
+	float: right;
+	width: 50%;
+}
+
+#seeker
+{
+	background-image: url(../images/login_seeker.jpg);
+	background-size: 100% 100%;
+	float: left;
+	height: 470px;
+	width: 100%;
+}
+
+#employer #button
+{
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: 25px;
+	margin-left: 2%;
+	width: 31%;
+	-webkit-border-radius: 8px;
+}
+
+#seeker #slogin
+{
+	background-color: #D0E4FE;
+	float: left;
+	height: 30%;
+	margin-left: 30px;
+	margin-top: 30px;
+	width: 35%;
+	-webkit-border-radius: 8px;	
+}
+
+#seeker #button
+{
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: 25px;
+	margin-left: 2.5%;
+	width: 30%;
+	-webkit-border-radius: 8px;
+}
+
+#seeker #joinus_heading
+{
+	float: left;
+	color: #CC0001;
+	font-size: 18px;
+	margin-left: 20px;
+	position: absolute;
+	text-decoration: underline;
+	width: 98%;
+}
+
+.div_left
+{
+	float: left;
+	width: 30%;
+}
+
+.div_center
+{
+	float: left;
+	width: 10%;
+}
+
+.div_right
+{
+	float: left;
+	width: 60%;
+}
+
+#textbox
+{
+	width: 200px;
+	-webkit-border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

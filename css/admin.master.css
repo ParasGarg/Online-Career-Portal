@@ -1,0 +1,30 @@
+/* CSS Document */
+
+body
+{
+	background-color: #C2DFFF;
+	width: 100%;
+}
+
+.div_body
+{
+	margin-left: 10%;
+}
+
+body .div_left
+{
+	float: left;
+	width: 40%;
+}
+
+body .div_center
+{
+	float: left;
+	width: 5%;
+}
+
+body .div_right
+{
+	float: left;
+	width: 55%;
+}

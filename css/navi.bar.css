@@ -1,0 +1,48 @@
+/* CSS Document */
+
+#navi_title_bar
+{
+	background-color: #222F50;
+	color: #FFFFFF;
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: auto;
+	margin-left: 82.7%;
+	margin-right: 10%;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	position: absolute;
+	width: 17.3%;
+	-webkit-border-radius: 8px;
+}
+
+#navi_title_bar a
+{
+	text-decoration:none;
+}
+
+#navi_title_bar a:hover
+{
+	text-decoration: underline;
+}
+
+#navi_title_navigation
+{
+	float: left;
+	font-size: 16px;
+	margin-left: 2px;
+}
+
+/* CSS File Details ==>>
+
+	File Name - title_bar.css
+	File Location - JobsPortal/css
+
+	ID used in CSS file
+		-> #title_bar
+		-> #title_bar a
+		-> #title_bar a:hover
+		-> #title_button
+		-> #title_quick_search
+		-> #title_navigation
+*/

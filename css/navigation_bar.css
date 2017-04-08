@@ -1,0 +1,75 @@
+/* CSS Document */
+
+#navi_bar
+{	
+	background-color: #FFFFFF;
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 3%;
+	position: absolute;
+	width: 80%;
+	-webkit-border-radius: 8px;
+}
+
+#navi_bar a
+{
+	font-weight: bold;
+	text-decoration:none;
+}
+
+#navi_bar a:hover
+{
+	text-decoration: underline;
+}
+
+#navi_image img
+{
+	float: left;
+	height: 110px;
+	width: 20%;
+	-webkit-border-radius: 8px;
+}
+
+#navi_shift_left 
+{
+	background-color: #222f50;;
+	display: block;
+	float: left;
+	font-size: 20px;
+	height: 27px;
+	margin-left: 20px;
+	margin-top: 37px;
+	width: 45%;
+	-webkit-border-radius: 8px;
+}
+
+
+#navi_shift_right 
+{
+	background-color: #222f50;;
+	display: block;
+	float: right;
+	font-size: 20px;
+	height: 27px;
+	margin-top: 37px;
+	margin-right: 5px;
+	width: 12%;
+	-webkit-border-radius: 8px;
+}
+
+/* CSS File Details ==>>
+
+	File Name - navigation_bar.css
+	File Location - JobsPortal/css
+
+	ID used in CSS file
+		-> #navi_bar
+		-> #navi_bar a
+		-> #navi_bar a:hover
+		-> #navi_img
+		-> #navi_shift_left
+		-> #navi_shift_right
+*/

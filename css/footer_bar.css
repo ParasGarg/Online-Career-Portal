@@ -1,0 +1,88 @@
+/* CSS Document */
+
+#footer
+{	
+	background-color: #222f50;
+	float: left;
+	font-family: Cambria, "Blackadder ITC";
+	height: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 47%;
+	position: absolute;
+	width: 80%;
+	-webkit-border-radius: 8px;
+}
+
+#footer_menu a
+{
+	color: #FFFFFF;
+	float: left;
+	height: 25px;
+	margin-right: 1px;
+	padding: 10px 20px 0 20px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#footer_menu
+{
+	float: left;
+}
+
+#footer_image
+{
+	color: #222f50;
+	float: right;
+	margin-right: 1%;
+	-webkit-border-radius: 8px;
+}
+
+#footer_menu ul, #footer_image ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#footer_menu li, #footer_image li 
+{
+	float: left;
+}
+
+#footer_image a
+{
+	float: left;
+	height: 25px;
+	padding: 10px 3px 0 3px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0066FF;
+}
+
+#footer_image img
+{
+	float: left;
+	height: 25px;
+	width: 25px;
+	-webkit-border-radius: 8px;
+}
+
+/* CSS File Description */
+
+/* FOOTER.CSS file
+	-> #footer
+	-> #footer_menu
+	-> #footer_menu li
+	-> #footer_menu ul
+	-> #footer_menu a
+	-> #footer_image
+	-> #footer_image a
+	-> #footer_image img
+	-> #footer_image li 
+	-> #footer_image ul
+	-> #footer_space
+*/
