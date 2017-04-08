@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>4.1</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>move</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>JobsPortalSlider</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>basic</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/silence/</ImageTemplate>
+            <ImageTemplateName>Silence</ImageTemplateName>
+            <ImageWidth>1088</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/Paras Garg/Documents/WOW Slider/slider.php</PublishFileName>
+            <PublishIndex>slider.php</PublishIndex>
+            <PublishPath>C:/Users/Paras Garg/Documents/WOW Slider</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>true</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>true</StopOnHover>
+            <TemplateName>silence</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>64</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>false</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/Longhorn Stay The Course Bliss.jpg</url>
+                <title>Longhorn Stay The Course Bliss</title>
+            </Image>
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/3.jpg</url>
+                <title>3</title>
+            </Image>
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/3D-6.jpg</url>
+                <title>3D-6</title>
+            </Image>
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/16074.jpg</url>
+                <title>16074</title>
+            </Image>
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/2469_TanBengHan_A.jpg</url>
+                <title>2469_TanBengHan_A</title>
+            </Image>
+            <Image>
+                <url>D:/Images/Wallpapers/Walls/Sceneries/25584.jpg</url>
+                <title>25584</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>
