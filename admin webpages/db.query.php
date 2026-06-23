@@ -6,59 +6,86 @@
 </script>
 
 <?php
-	
-	//Declaring InsertToDB() function which executes on click of INSERT BUTTON
+
+	// Including PDO database connection
+	require '../db.pdo.php';
+
+	// Declaring InsertToDB() function which executes on click of INSERT BUTTON
 	function InsertToDB()
 	{
 		if(isset($_GET['job_industry_type']))
 		{
-			//Initializing variables with the user inputs
+			// Initializing variables with the user inputs
 			$IndustryType = $_GET['job_industry_type'];
-						
+
 			if(!empty($IndustryType))
 			{
-				//Query which is going to execute to for database manipulation
-				$query ="INSERT INTO job_details VALUES ('', '$IndustryType')";
-				$query_run = mysql_query($query);
-				
-				unset($_GET['job_industry_type']);
-				$_GET['job_industry_type'] = '';
+				// Query with prepared statement
+				$sql = "INSERT INTO job_details (industry_type) VALUES (?)";
+
+				try {
+					global $pdo;
+					$stmt = $pdo->prepare($sql);
+					$stmt->execute([$IndustryType]);
+
+					unset($_GET['job_industry_type']);
+					$_GET['job_industry_type'] = '';
+				} catch (PDOException $e) {
+					error_log("Insert query failed: " . $e->getMessage());
+					echo '<script> alert("Error inserting record. Please try again."); </script>';
+				}
 			}
 		}
 	}
-	
-	//Declaring DeleteToDB() function which executes on click of DELETE BUTTON
+
+	// Declaring DeleteToDB() function which executes on click of DELETE BUTTON
 	function DeleteToDB()
 	{
 		if(isset($_GET['job_id']))
 		{
-			//Initializing variables with the user inputs
+			// Initializing variables with the user inputs
 			$Id = $_GET['job_id'];
-			
+
 			if(!empty($Id))
-			{				
-				//Query which is going to execute to for database manipulation
-				$query ="DELETE FROM job_details WHERE id='$Id'";
-				$query_run = mysql_query($query);
+			{
+				// Query with prepared statement
+				$sql = "DELETE FROM job_details WHERE id = ?";
+
+				try {
+					global $pdo;
+					$stmt = $pdo->prepare($sql);
+					$stmt->execute([$Id]);
+				} catch (PDOException $e) {
+					error_log("Delete query failed: " . $e->getMessage());
+					echo '<script> alert("Error deleting record. Please try again."); </script>';
+				}
 			}
-		}	
+		}
 	}
-	
-	//Declaring UpdateToDB() function which executes on click of UPDATE BUTTON
+
+	// Declaring UpdateToDB() function which executes on click of UPDATE BUTTON
 	function UpdateToDB()
 	{
 		if(isset($_GET['job_id']))
 		{
-			//Initializing variables with the user inputs
+			// Initializing variables with the user inputs
 			$Id = $_GET['job_id'];
 			$IndustryType = $_GET['job_industry_type'];
-			
+
 			if(!empty($Id))
-			{				
-				//Query which is going to execute to for database manipulation
-				$query ="UPDATE job_details SET industry_type='$IndustryType' WHERE id='$Id'";
-				$query_run = mysql_query($query);
+			{
+				// Query with prepared statement
+				$sql = "UPDATE job_details SET industry_type = ? WHERE id = ?";
+
+				try {
+					global $pdo;
+					$stmt = $pdo->prepare($sql);
+					$stmt->execute([$IndustryType, $Id]);
+				} catch (PDOException $e) {
+					error_log("Update query failed: " . $e->getMessage());
+					echo '<script> alert("Error updating record. Please try again."); </script>';
+				}
 			}
-		}	
+		}
 	}
 ?>

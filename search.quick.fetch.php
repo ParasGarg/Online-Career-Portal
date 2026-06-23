@@ -1,22 +1,26 @@
-<?php 
-	
-	//Including database connection files to the page.
-	require 'db.connect.php';
-	
-	//Checking whether value of textbox does exist or not.
+<?php
+
+	// Including PDO database connection
+	require 'db.pdo.php';
+
+	// Checking whether value of textbox does exist or not.
 	if(isset($_POST['quick_key']) && isset($_POST['quick_location']))
 	{
-		//Initializing variables with the user inputs.
+		// Initializing variables with the user inputs.
 		$key = $_POST['quick_key'];
 		$location = $_POST['quick_location'];
-				
-		//Checking whether value is empty or not in given textbox or not.
+
+		// Checking whether value is empty or not in given textbox or not.
 		if(!empty($key) && !empty($location))
 		{
-			//Query which is going to execute to for database manipulation.
-			$query = "SELECT * FROM job_details WHERE location= '$location' OR key_skill LIKE '%$key%'";
-			$query_quick = mysql_query($query);
-						
+			// Query with prepared statements
+			$sql = "SELECT * FROM job_details WHERE location = ? OR key_skill LIKE ?";
+
+			try {
+				$stmt = $pdo->prepare($sql);
+				$stmt->execute([$location, "%{$key}%"]);
+				$results = $stmt->fetchAll();
+
 				echo '	<table border="1">
 							<tr>
 								<td><center><b>Name</center></b></td>
@@ -27,36 +31,35 @@
 								<td><center><b>More</b></center></td>
 							</tr>
 						</table>';
-				
-			$query_rows_num = mysql_num_rows($query_quick);
-			if($query_rows_num > 0)
-			{		
-				while($query_quick_result = mysql_fetch_array($query_quick))
-				{	
-					echo '	<table border="1">
-								<tr>
-									<td><center>'.$query_quick_result['name'].'</center></td>
-									<td><center>'.$query_quick_result['profile'].'</center></td>
-									<td><center>'.$query_quick_result['key_skill'].'</center></td>
-									<td><center>'.$query_quick_result['location'].'</center></td>
-									<td><center>'.$query_quick_result['ctc'].'</center></td>
-									<td><center>';								
-							
-							echo	'<a href="search.jobs.view.php" onClick="MyWindow=window.open('."'search.jobs.view.php?id="
-									.$query_quick_result['id']."', '_window');".'return false;">	
-										Click for Details			
-									</a>
-									</center></td>
-								</tr>';		
-				echo'	</table>';
+
+				if (count($results) > 0) {
+					foreach ($results as $row) {
+						echo '	<table border="1">
+									<tr>
+										<td><center>' . htmlspecialchars($row['name']) . '</center></td>
+										<td><center>' . htmlspecialchars($row['profile']) . '</center></td>
+										<td><center>' . htmlspecialchars($row['key_skill']) . '</center></td>
+										<td><center>' . htmlspecialchars($row['location']) . '</center></td>
+										<td><center>' . htmlspecialchars($row['ctc']) . '</center></td>
+										<td><center>';
+
+								echo	'<a href="search.jobs.view.php" onClick="MyWindow=window.open(' . "'search.jobs.view.php?id="
+										. $row['id'] . "', '_window');" . 'return false;">
+											Click for Details
+										</a>
+										</center></td>
+									</tr>';
+						echo '	</table>';
+					}
+				} else {
+					echo '<script> alert("No result Found. Search with different keywords"); </script>';
 				}
-			}
-			else
-			{
-				echo '<script> alert("No result Found. Search with different keywords"); </script>';
+			} catch (PDOException $e) {
+				error_log("Quick search query failed: " . $e->getMessage());
+				echo '<script> alert("An error occurred while searching. Please try again."); </script>';
 			}
 		}
-		
+
 		else if(empty($key) || empty($location))
 		{
 			header('Location: index.php');
