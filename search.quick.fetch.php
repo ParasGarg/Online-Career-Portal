@@ -34,20 +34,22 @@
 
 				if (count($results) > 0) {
 					foreach ($results as $row) {
+						$esc = fn($v) => htmlspecialchars($v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+						$jobId = (int)$row['id'];
 						echo '	<table border="1">
 									<tr>
-										<td><center>' . htmlspecialchars($row['name']) . '</center></td>
-										<td><center>' . htmlspecialchars($row['profile']) . '</center></td>
-										<td><center>' . htmlspecialchars($row['key_skill']) . '</center></td>
-										<td><center>' . htmlspecialchars($row['location']) . '</center></td>
-										<td><center>' . htmlspecialchars($row['ctc']) . '</center></td>
+										<td><center>' . $esc($row['name']) . '</center></td>
+										<td><center>' . $esc($row['profile']) . '</center></td>
+										<td><center>' . $esc($row['key_skill']) . '</center></td>
+										<td><center>' . $esc($row['location']) . '</center></td>
+										<td><center>' . $esc($row['ctc']) . '</center></td>
 										<td><center>';
 
-								echo	'<a href="search.jobs.view.php" onClick="MyWindow=window.open(' . "'search.jobs.view.php?id="
-										. $row['id'] . "', '_window');" . 'return false;">
-											Click for Details
-										</a>
-										</center></td>
+								echo	'<a href="MyWindow=window.open(' . "'search.jobs.view.php?id="
+										. $jobId . "', '_window');" . 'return false;">
+												Click for Details
+											</a>
+											</center></td>
 									</tr>';
 						echo '	</table>';
 					}

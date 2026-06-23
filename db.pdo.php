@@ -4,11 +4,11 @@
  * Replaces deprecated mysql_* extension with secure PDO prepared statements
  */
 
-// Database configuration (same as db.connect.php)
-$pdo_host = 'localhost';
-$pdo_user = 'root';
-$pdo_pass = '';
-$pdo_db   = 'jobsportal';
+// Database configuration - prefer environment variables with insecure defaults as fallback
+$pdo_host = getenv('DB_HOST') ?: 'localhost';
+$pdo_user = getenv('DB_USER') ?: 'root';
+$pdo_pass = getenv('DB_PASS') ?: '';
+$pdo_db   = getenv('DB_NAME') ?: 'jobsportal';
 $pdo_charset = 'utf8mb4';
 
 try {

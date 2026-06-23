@@ -8,7 +8,7 @@
 <?php
 
 	// Including PDO database connection
-	require '../db.pdo.php';
+	require_once '../db.pdo.php';
 
 	// Declaring InsertToDB() function which executes on click of INSERT BUTTON
 	function InsertToDB()
@@ -70,9 +70,9 @@
 		{
 			// Initializing variables with the user inputs
 			$Id = $_GET['job_id'];
-			$IndustryType = $_GET['job_industry_type'];
+			$IndustryType = $_GET['job_industry_type'] ?? '';
 
-			if(!empty($Id))
+			if(!empty($Id) && !empty($IndustryType))
 			{
 				// Query with prepared statement
 				$sql = "UPDATE job_details SET industry_type = ? WHERE id = ?";
