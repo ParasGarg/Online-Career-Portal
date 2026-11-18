@@ -8,7 +8,7 @@
 	{
 		if(isset($_POST['seeker_email_login']) && isset($_POST['seeker_pass_login']))
 		{
-			$seeker_login_email = strtolower($_POST['seeker_email_login']);
+			$seeker_login_email = mysql_real_escape_string(strtolower($_POST['seeker_email_login']));
 			$seeker_login_pass = md5($_POST['seeker_pass_login']);
 			
 			if(!empty($_POST['seeker_email_login']) && !empty($_POST['seeker_pass_login']))
